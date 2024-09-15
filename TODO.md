@@ -1,7 +1,7 @@
 ## Using Load Balancer
-- [ ] Create NGINX load balancer
-- [ ] Route traffice via load balancer
-- [ ] Check files if load balancer did work
+- [x] Create NGINX load balancer
+- [x] Route traffic via load balancer
+- [x] Check files if load balancer did work
 
 ## Using replica instead of manually defined services in compose.yaml
 - [ ] Replace manual services with replicas

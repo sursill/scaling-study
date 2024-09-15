@@ -13,9 +13,9 @@ http
 
     console.debug(`Writing new file to: ${filePath}`)
 
-    fs.writeFile(filePath, url, (err) => {
-      console.error(err)
-    })
+    // fs.writeFile(filePath, url, (err) => {
+    //   console.error(err)
+    // })
 
     const responseObj = {
       file: { filePath, fileName },
