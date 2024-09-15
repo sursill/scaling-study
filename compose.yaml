@@ -1,0 +1,28 @@
+services:
+
+  backend_1a:
+    image: scaling-study-backend:latest
+    environment:
+      INSTANCE_ID: 'rplca-1a'
+    volumes:
+      - ./storage/rplca-1a/:/home/node/app/storage/app
+    ports:
+      - 8080:8080
+
+  backend_2a:
+    image: scaling-study-backend:latest
+    environment:
+      INSTANCE_ID: 'rplca-2a'
+    volumes:
+      - ./storage/rplca-2a/:/home/node/app/storage/app
+    ports:
+      - 8081:8080
+
+  backend_3a:
+    image: scaling-study-backend:latest
+    environment:
+      INSTANCE_ID: 'rplca-3a'
+    volumes:
+      - ./storage/rplca-3a/:/home/node/app/storage/app
+    ports:
+      - 8082:8080
