@@ -28,11 +28,10 @@ build-runner: ## Build image for runner
 	@docker build . --file runner.Dockerfile --tag scaling-study-runner:latest
 
 run-runner: ## Run the test
-	@docker run -it --rm -v ./:/usr/src/app -w /usr/src/app --network=scaling-study_default scaling-study-runner:latest python run.py
+	@docker run -it --rm -v ./:/usr/src/app -w /usr/src/app --network=host --label traefik.enable=false scaling-study-runner:latest python run.py
 
 exec-runner: ## Exec into runner container
 	@docker run -it --rm -v ./:/usr/src/app -w /usr/src/app python:3.12-alpine sh
 
 meta-clean: ## Remove docker images
 	@docker image rm $$(docker images --filter "reference=scaling-study-*")
-	
